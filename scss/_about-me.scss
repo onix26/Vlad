@@ -1,0 +1,42 @@
+/*==============================Обо мне==============================*/
+.about-me{
+	width: 100%;
+	margin-bottom: 1.5em;
+	
+	&__title{
+		@include title;
+	}
+	& h1{
+		@include title-font;
+	}
+}
+
+
+.my-photo{
+	width: 100%;
+	height: auto;
+	margin: 3em 0;
+	& img{
+		width: 90%;
+		height: inherit;
+		padding: 0 5%;
+	}
+}
+.des{
+	font-family: 'Caveat', cursive;
+	color: #0f0f0f;
+	text-align: center;
+	&__title{
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		font-style: italic;
+		font-size: 2.5em;
+		padding-top: 2em;
+	}
+	&__text1{
+		color: #000;
+		font-size: 1.6em;
+		line-height: 1.7;
+		padding-top: 2em;
+	}
+}

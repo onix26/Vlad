@@ -1,0 +1,36 @@
+@mixin title {
+	width: 100%;
+	background-color: #FFFAFA;
+	box-shadow:0 2px rgba(192, 192, 192,0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5em 0;
+	color: #A9A9A9;
+}
+@mixin title-font{
+	font-family: 'Caveat', cursive;
+	font-weight: bold;
+	font-size:3em;
+}
+
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+}
+body{
+    font-family: 'Marck Script', cursive;
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+}
+@import "header";
+@import "about-me";
+@import "portfolio";
+@import "skills";
+@import "contacts";
+
+
+

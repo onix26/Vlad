@@ -1,0 +1,168 @@
+@mixin tehnology{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2.5em 0;
+}
+
+@mixin text{
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+	color: #DEB887;
+	text-align: center;
+}
+@mixin load{
+	width: 0%;
+	height: 15px;
+	background-color: #696969;
+}
+
+
+.my-skills{
+	width: 100%;
+
+	&__title{
+		@include title;
+		& h3{
+			@include title-font;
+		}
+	}
+}
+
+.skills{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	&__tehnology{
+		@include tehnology;
+
+
+		&--title{
+			@include text;
+			width: 30%;
+		}
+		&--processing{
+				width: 50%;
+			&-html{
+				@include load;
+				animation:loadingHTML 7s ease-in-out forwards ;
+			}
+
+			&-scss{
+				@include load;
+				animation:loadSCSS 6s linear forwards;
+			}
+			&-js{
+				@include load;
+				animation:loadJS 5s ease-out forwards;
+			}
+			&-bs{
+				@include load;
+				animation: loadBS 5s ease-in forwards;
+			}
+			&-gulp{
+				@include load;
+				animation: loadGulp 2s ease-in forwards;
+			}
+
+			&-git{
+				@include load;
+				animation: loadGit 4s ease-in forwards;
+			}
+		}
+		&--text{
+			@include text;
+			animation-delay: 7s;
+			animation:fade 5s linear forwards;
+			opacity: 0;
+		}
+	}
+
+}
+ 
+
+@keyframes loadingHTML{
+	0%{
+		width: 0%;
+	}
+	50%{
+		width: 45%;
+	}
+	100%{
+		width: 85%;
+	}
+} 
+
+@keyframes fade{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes loadSCSS{
+	0%{
+		width: 0%;
+	}
+	50%{
+		width: 45%;
+	}
+	100%{
+		width: 60%;
+	}
+} 
+
+@keyframes loadJS{
+	0%{
+		width: 0%;
+	}
+	50%{
+		width: 35%;
+	}
+	100%{
+		width: 60%;
+	}
+} 
+
+@keyframes loadBS{
+	0%{
+		width: 0%;
+	}
+	50%{
+		width: 35%;
+	}
+	100%{
+		width: 70%;
+	}
+}
+
+@keyframes loadGulp{
+	0%{
+		width: 0%;
+	}
+	50%{
+		width: 10%;
+	}
+	100%{
+		width: 20%;
+	}
+}
+
+@keyframes loadGit{
+	0%{
+		width: 0%;
+	}
+	50%{
+		width: 15%;
+	}
+	100%{
+		width: 30%;
+	}
+}

@@ -1,0 +1,103 @@
+header{
+	width: 100%;
+	height: 30em;
+	background-image: url(../img/bg.jpg);
+}
+.header{
+	width: 100%;
+	height: 4.5em;
+}
+.menu-block{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.menu{
+	display: flex;
+	justify-content: space-between;
+	&__item{
+		list-style: none;
+		vertical-align: middle;
+		font-family: 'Marck Script', cursive;
+		font-size: 1.5em;
+		color: #fafafa;
+		padding-left:20px;
+		& a{
+			color:inherit;
+			&:hover{
+				color:#00FFFF;
+				text-decoration: none;
+				border-bottom:2px solid #00FFFF;
+				transition: all 0.5s linear;
+			}
+		}
+	}
+}
+
+
+.m-mobile{
+
+	&.active{
+		display: block;
+	}
+}
+
+
+
+@media (max-width : 768px){
+	.menu{
+		display: none;
+	}
+	.m-menu{
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		right: 30px;
+		top: 40px;
+		width: 100%;
+		border: 1px solid #000;
+		background-color: #fff;
+	}
+
+}
+
+.inner-block{
+	width: 100%;
+	height: 450px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.inner{
+	color:#E0FFFF;
+	text-align: center;
+	font-family: 'Caveat', cursive;
+	&__welcome{
+		font-size: 2em;
+	}
+	&__title{
+		font-weight: bold;
+		font-size: 3.5em;
+	}
+	&__link{
+		display: inline-block;
+		padding: 15px ;
+		background-color: #00FA9A;
+		color: #fff;
+		font-family: Arial , sans-serif;
+		font-size: 1.5em;
+		font-weight: bold;
+		border-radius:10px;
+		border:3px solid #00FA9A;
+		margin-top: 30px;
+		&:hover{
+			text-decoration: none;
+			color: #00FA9A;
+			background-color: transparent;
+			border:3px solid #fff;
+			transition: all 0.5s linear;
+		}
+	}
+}

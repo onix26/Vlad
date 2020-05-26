@@ -1,0 +1,61 @@
+* {
+   margin:0;
+   padding:0;
+}
+body, html {
+   width:100%;
+   height:100%;
+}
+body {
+   background-color: #000;
+}
+.logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   .glitch {
+      color:#cacaca;
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size:64px;
+      position: relative;
+      padding:30px;
+      &:before, &:after {
+         content:'onix26';
+         color:#cacaca;
+         position: absolute;
+         top:0;
+         overflow:hidden;
+         padding:30px;
+      }
+      &:before {
+         left:3px;
+         text-shadow: -3px 0 orange;
+         animation: glitch-before 2s linear 0s infinite alternate;
+      }
+      &:after {
+         left:-3px;
+         text-shadow: -3px 0 green;
+         animation: glitch-after 2s linear 0s infinite alternate;
+      }
+   }
+}
+
+@keyframes glitch-before {
+   $steps: 20;
+   @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+         clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+      }
+   }
+}
+
+@keyframes glitch-after {
+   $steps: 20;
+   @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+         clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+      }
+   }
+}
