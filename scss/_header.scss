@@ -26,8 +26,8 @@ header{
 		width: 40px;
 		height: 40px;
 		position: absolute;
-		right: -75px;
-		top: 15px;
+		right: 0;
+		top: -20px;
 		border: 2px solid #000;
 		border-radius: 4px;
 		background-color: #fafafa;
@@ -127,8 +127,8 @@ header{
 	}
 	.menu{
 
-		&-btn{
+		/* &-btn{
 			right: -50px;
-		}
+		} */
 	}
 }
