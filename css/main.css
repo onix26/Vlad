@@ -93,6 +93,9 @@ header {
   .menu-btn {
     display: block;
   }
+  .menu__item {
+    display: none;
+  }
 }
 
 .inner-block {
